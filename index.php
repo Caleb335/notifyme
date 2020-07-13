@@ -25,11 +25,14 @@
             echo('<p>There was an error with your form: </p>\n');
             echo('<ul>' . $errorMessage . '</ul>\n');
         } else {
-            $fs = fopen("mydata.csv", "a");
+            // writes the form input(data) to a CSV file called 'mydata.csv'
+            $fs = fopen("mydata.csv", "a"); 
+                // concatenates, join both strings or values recieved from the form submission
                 fwrite($fs,$name . ", " . $email . "\n");
                 fclose($fs);
                 
-                header("Location: ./thankyou.html");
+                // redirects to a new html page on form submission
+                header("Location: ./thankyou.html"); 
                 exit;
         }
     } 
