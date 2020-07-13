@@ -44,7 +44,7 @@
             <input type="text" name="fullname" placeholder="full name" value="<?=$name;?>">
         </div>
         <div class="input-group">
-            <input type="email" name="fullname" placeholder="full name" value="<?=$email;?>">
+            <input type="email" name="email" placeholder="email" value="<?=$email;?>">
         </div>
         <input type="submit" value="submit" name="submitForm">
     </form>
