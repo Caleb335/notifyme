@@ -24,6 +24,13 @@
         if(!empty($errorMessage)) {
             echo('<p>There was an error with your form: </p>\n');
             echo('<ul>' . $errorMessage . '</ul>\n');
+        } else {
+            $fs = fopen("mydata.csv", "a");
+                fwrite($fs,$name . ", " . $email . "\n");
+                fclose($fs);
+                
+                header("Location: ./thankyou.html");
+                exit;
         }
     } 
         if(isset($_POST['form_submitted'])): 
