@@ -37,6 +37,28 @@
                 exit;
             }
         }
+
+        // insert the form data in to the database table
+        // 'spaceSeeSubscribers' which is the table name 
+        $sql = "INSERT INTO spaceSeeSubscribers (fullname, email) 
+            VALUES (". 
+                PrepSQL($name) . ", " .
+                PrepSQL($email) . ")";
+
+        function PrepSQL($value) {
+            // remove slashes from the string when escaping single or double quotes
+            if(get_magic_quotes_gpc()) {
+                $value = stripslashes($value);
+            }
+
+            // add quotes
+            $value = "'" . mysql_real_escape_string($value) . "'";
+
+            return($value);
+        }
+
+        // run SQL query
+        mysql_query($sql)
     ?>
 
     <form action="./index.php" method="POST">
