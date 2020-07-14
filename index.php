@@ -69,63 +69,65 @@
     ?>
     <div class="container">
             <!-- head section -->
-    <section id="header">
-        <header>
-            <nav>
-                <div class="nav-brand">
-                    <img src="./assets/see.png" alt="">
-                    <div class="brand-text">
-                        <h3>spacesee</h3>
+        <section id="header">
+            <header>
+                <nav>
+                    <div class="nav-brand">
+                        <img src="./assets/see.png" alt="">
+                        <div class="brand-text">
+                            <h3>spacesee</h3>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </section>
+
+        <!-- main section -->
+        <section id="main">
+            <div class="hero">
+                <div class="hero-intro">
+                    <h1>spacesee</h1>
+                    <div class="hero-details">
+                        <p>Learn about your Universe and everything in it. The app that allows you to travel through space with out leaving where you are. </p>
+                    </div>
+                    <p class="cta">Coming soon...</p>
+                </div>
+            </div>
+            <!-- know more -->
+            <div class="facts">
+                <div class="facts-intro">
+                    <p>Did You Know?</p> <hr>
+                </div>
+                <div class="facts-container">
+                    <div class="fact-box one">
+                        <p class="num">01</p>
+                        <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
+                    </div>
+                    <div class="fact-box two">
+                        <p class="num">02</p>
+                        <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
+                    </div>
+                    <div class="fact-box three">
+                        <p class="num">03</p>
+                        <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
                     </div>
                 </div>
-            </nav>
-        </header>
-    </section>
+            </div>
+        </section>
 
-    <!-- main section -->
-    <section id="main">
-        <div class="hero">
-            <div class="hero-intro">
-                <h1>spacesee</h1>
-                <div class="hero-details">
-                    <p>Learn about your Universe and everything in it. The app that allows you to travel through space with out leaving where you are. </p>
-                </div>
-                <p class="cta">Coming soon...</p>
+        <!-- form section -->
+        <section id="form">
+            <div class="form-container">
+                <form action="./index.php" method="POST">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email Address" value="<?=$email;?>">
+                    </div>
+                    <div class="input-group">
+                        <input type="submit" value="Notify Me" name="submitForm">
+                    </div>
+                </form>
             </div>
-        </div>
-        <!-- know more -->
-        <div class="facts">
-            <div class="facts-intro">
-                <p>Did You Know?</p> <hr>
-            </div>
-            <div class="fact-box one">
-                <p class="num">01</p>
-                <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
-            </div>
-            <div class="fact-box two">
-                <p class="num">02</p>
-                <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
-            </div>
-            <div class="fact-box three">
-                <p class="num">03</p>
-                <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- form section -->
-    <section id="form">
-        <div class="form-container">
-            <form action="./index.php" method="POST">
-                <div class="input-group">
-                    <input type="email" name="email" placeholder="Email Address" value="<?=$email;?>">
-                </div>
-                <div class="input-group">
-                    <input type="submit" value="Notify Me" name="submitForm">
-                </div>
-            </form>
-        </div>
-    </section>
+        </section>
     </div>
 </body>
 </html>

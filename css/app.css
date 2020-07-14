@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +29,7 @@ body {
 
 .container {
     margin: 0 auto;
+    height: 100vh;
 }
 /* head section starts here */
 header, #main {
@@ -56,11 +59,12 @@ header, #main {
     margin-top: 10%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hero-intro h1 {
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 71px;
     animation: leftSlideIn .8s forwards;
     -o-animation: leftSlideIn .8s forwards;
@@ -128,7 +132,7 @@ hr {
 } 
 
 .three {
-    animation-delay: .8s;
+    animation-delay: 1.5s;
 }
 
 .fact-box .num {
@@ -136,13 +140,18 @@ hr {
     font-weight: bold;
     padding-bottom: 10px;
 }
+
+.facts-container {
+    min-width: 100%;
+    overflow-x: hidden;
+}
 /* hero section ends here */
 
 /* form section starts here */
 .form-container {
     display: flex;
     justify-content: center;
-    margin-top: 4%;
+    margin-top: 1%;
     margin-bottom: 2%;
 }
 
@@ -205,5 +214,68 @@ form > div {
     } 100% {
         transform: translate(12px);
         opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    header, #main {
+        padding: 20px;
+        margin-left: 3%;
+    }
+
+    #main {
+        margin-top: -10%;
+    }
+    .hero-intro h1 {
+        font-size: 60px;
+        padding-top: 15px;
+    }
+    
+    .cta {
+        padding-top: 13px;
+    }
+
+    .hero-details {
+        width: 100%;
+    }
+
+    .hero-details p {
+        font-size: 18px;
+    }
+
+    .facts-container {
+        width: 350px;
+        margin-left: -3%;
+        display: flex;
+    }
+
+    .facts {
+        margin-top: 4%;
+    }
+
+    .fact-box {
+        min-width: 130px;
+        height: 150px;
+    }
+
+    .facts-intro p {
+        font-size: 14px;
+    }
+
+    .fact-box {
+        margin-top: 7%;
+        margin-left: 10px;
+    }
+
+    form input {
+        width: 100%;
+        margin-bottom: 3%;
+        margin-left: -6%;
+    }
+
+    input[type="submit"] {
+        width: 100px;
+        margin-left: -18px;
     }
 }
