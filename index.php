@@ -19,7 +19,7 @@
     }
 
     .input-group {
-        margin: 20px;
+        margin-top: 20px;
     }
 </style>
 <body>
