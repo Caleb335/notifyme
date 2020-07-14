@@ -225,8 +225,9 @@ form > div {
     }
 
     #main {
-        margin-top: -10%;
+        margin-top: 6%;
     }
+
     .hero-intro h1 {
         font-size: 60px;
         padding-top: 15px;
@@ -248,10 +249,16 @@ form > div {
         width: 350px;
         margin-left: -3%;
         display: flex;
+        overflow-x: auto;
+    }
+
+    .facts-container::-webkit-scrollbar {
+        display: none;
     }
 
     .facts {
-        margin-top: 4%;
+        margin-top: 12%;
+        margin-left: 2%;
     }
 
     .fact-box {
@@ -266,6 +273,10 @@ form > div {
     .fact-box {
         margin-top: 7%;
         margin-left: 10px;
+    }
+
+    #form {
+        margin-top: 9%;
     }
 
     form input {
