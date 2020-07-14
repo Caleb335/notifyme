@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form subscription</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .form-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 12%;
+    }
+
+    .input-group {
+        margin: 20px;
+        padding: 8px;
+    }
+</style>
 <body>
     <!-- executes when the form is submitted -->
     <?php
@@ -38,37 +56,19 @@
             }
         }
 
-        // insert the form data in to the database table
-        // 'spaceSeeSubscribers' which is the table name 
-        $sql = "INSERT INTO spaceSeeSubscribers (fullname, email) 
-            VALUES (". 
-                PrepSQL($name) . ", " .
-                PrepSQL($email) . ")";
-
-        function PrepSQL($value) {
-            // remove slashes from the string when escaping single or double quotes
-            if(get_magic_quotes_gpc()) {
-                $value = stripslashes($value);
-            }
-
-            // add quotes
-            $value = "'" . mysql_real_escape_string($value) . "'";
-
-            return($value);
-        }
-
-        // run SQL query
-        mysql_query($sql)
+        
     ?>
 
-    <form action="./index.php" method="POST">
-        <div class="input-group">
-            <input type="text" name="fullname" placeholder="full name" value="<?=$name;?>">
-        </div>
-        <div class="input-group">
-            <input type="email" name="email" placeholder="email" value="<?=$email;?>">
-        </div>
-        <input type="submit" value="submit" name="submitForm">
-    </form>
+    <div class="form-container">
+        <form action="./index.php" method="POST">
+            <div class="input-group">
+                <input type="text" name="fullname" placeholder="full name" value="<?=$name;?>">
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="email" value="<?=$email;?>">
+            </div>
+            <input type="submit" value="submit" name="submitForm">
+        </form>
+    </div>
 </body>
 </html>
