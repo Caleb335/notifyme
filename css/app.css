@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --web-background: #2B2B2B;
+    --mobile-background: #050505;
+    --primary-color: #E76A3B;
+    --secondary-color: #85430F;
+    --info: #A9A9A9;
+    --input-bg: #F5F5FB;
+    --venus: #85430F;
+    --text-dark: #151817;
+}
+
+body {
+    background-image: url(../assets/deed.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    margin: 0 auto;
+}
+/* head section starts here */
+header, #main {
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.nav-brand {
+    display: flex;
+}
+
+.nav-brand img {
+    width: 30px;
+    height: 20px;
+}
+
+.nav-brand > div {
+    margin-left: 8px;
+    text-transform: uppercase;
+    color: var(--input-bg);
+}
+
+/* head section ends here */
+
+/* hero section starts here */
+#main {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-intro h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 71px;
+}
+
+.hero h1, h3, p {
+    color: var(--input-bg);
+}
+
+.hero-details {
+    width: 500px;
+    font-size: 22px;
+    height: 80px;
+}
+
+.cta {
+    font-size: 38px;
+}
+
+.facts {
+    margin-top: -12%;
+}
+
+hr {
+    width: 100px;
+}
+
+.fact-box {
+    width: 120px;
+    height: 145px;
+    border-radius: 5px;
+    border: 1px solid var(--input-bg);
+    margin-top: 10px;
+    padding: 8px;
+}
+
+.fact-box .num {
+    padding-top: 5px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+/* hero section ends here */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+form {
+    display: flex;
+}
+
+form input {
+    height: 36px;
+    padding: 12px;
+    width: 430px;
+    border-radius: 4px;
+    background: var(--input-bg);
+    border: none;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 120px;
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+form > div {
+    margin-left: 30px;
+}
