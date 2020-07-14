@@ -189,6 +189,35 @@ form > div {
 }
 /* form section ends here */
 
+/* app pages starts here */
+#app_pages {
+    background: var(--web-background);
+    padding-top: 76px;
+    padding-left: 53px;
+    margin-top: 8%;
+}
+
+.pages {
+    display: flex;
+}
+
+.planet-info {
+    width: 200px;
+    height: 120px;
+    margin-left: 7%;
+    font-size: 19px;
+    margin-top: -15px;
+}
+
+.planet-info hr {
+    width: 15px;
+}
+
+.info-num {
+    font-weight: bold;
+}
+/* app pages ends here */
+
 /* keyframes */
 @keyframes slideIn {
     0% {

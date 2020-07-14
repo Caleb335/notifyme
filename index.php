@@ -12,38 +12,38 @@
 <body>
     <!-- executes when the form is submitted -->
     <?php
-        if($_POST['submitForm'] === 'submit') {
+        if(isset($_POST['submit_btn'])) {
+            $email = $_POST['email'];
+
             $errorMessage = '';
             
             // adding the validation script
              if(empty($_POST['email'])) {
-                $errorMessage .= '<li>You forgot to enter your email address</li>';
+                 $errorMessage .= 'You forgot to enter your email address.';
             }
-
-            // form variables
-            $email = $_POST['email'];
-            $name = $_POST['fullname'];
 
             if(!empty($errorMessage)) {
                 echo('<p>There was an error with your form: </p>\n');
                 echo('<ul>' . $errorMessage . '</ul>\n');
             } else {
-            // writes the form input(data) to a CSV file called 'mydata.csv'
-            $fs = fopen("mydata.csv", "a"); 
-                // concatenates, join both strings or values recieved from the form submission
-                fwrite($fs,$name . ", " . $email . "\n");
-                fclose($fs);
-                
-                // redirects to a new html page on form submission
-                header("Location: ./thankyou.html"); 
-                exit;
+                header("Location: ./thankyou.html");
             }
+            // // writes the form input(data) to a CSV file called 'mydata.csv'
+            // $fs = fopen("mydata.csv", "a"); 
+            //     // concatenates, join both strings or values recieved from the form submission
+            //     fwrite($fs . $email . "\n");
+            //     fclose($fs);
+                
+            //     // redirects to a new html page on form submission
+            //     header("Location: ./thankyou.html"); 
+            //     exit;
+            // }
 
              // create database connection and db variables
             $servername = "localhost";
             $username = "root";
             $password = "";
-            $dbname = "spaceSee";
+            $dbname = "my_db";
         
             // connect to database
             $conn = mysql_connect($servername, $username, $password, $dbname);
@@ -52,7 +52,7 @@
             if(!$conn) {
                 die("Connection failed: " . mysql_connect_error());
             } else {
-                $sql = "INSERT INTO spaceSeeSubbers (email, fullname) values('$name', '$email')";
+                $sql = "INSERT INTO spaceSeeSubbers (email) values('$email')";
                 // if the database connnection has been created successfully print a message saying:
                 // new email address has been added
                 if(mysql_query($conn, $sql)) {
@@ -65,7 +65,6 @@
             // close the connection to database
             mysqli_close($conn);
         }
-
     ?>
     <div class="container">
             <!-- head section -->
@@ -123,12 +122,41 @@
                         <input type="email" name="email" placeholder="Email Address" value="<?=$email;?>">
                     </div>
                     <div class="input-group">
-                        <input type="submit" value="Notify Me" name="submitForm">
+                        <input type="submit" value="Notify Me" name="submit_btn">
                     </div>
                 </form>
+            </div>
+        </section>
+
+        <!-- app pages section -->
+        <section id="app_pages">
+            <div class="pages">
+                <!-- first page -->
+                <div class="planet mecury">
+                    <img src="./assets/planet-mecury.png" alt="planet mecury">
+                    <div class="planet-info">
+                        <p class="info-num">01. <hr></p>
+                        <p>scroll through to select your prefered planet</p>
+                    </div>
+                </div>
+
+                <div class="planet mecury">
+                    <img src="./assets/planet-mecury.png" alt="planet mecury">
+                    <div class="planet-info">
+                        <p class="info-num">01. <hr></p>
+                        <p>scroll through to select your prefered planet</p>
+                    </div>
+                </div>
+
+                <div class="planet mecury">
+                    <img src="./assets/planet-mecury.png" alt="planet mecury">
+                    <div class="planet-info">
+                        <p class="info-num">01. <hr></p>
+                        <p>scroll through to select your prefered planet</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 </body>
 </html>
-
