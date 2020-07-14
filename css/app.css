@@ -104,6 +104,10 @@ header, #main {
     margin-top: -12%;
 }
 
+.facts .facts-intro {
+    margin-left: -23%;
+}
+
 hr {
     width: 110px;
 }
@@ -144,6 +148,7 @@ hr {
 .facts-container {
     min-width: 100%;
     overflow-x: hidden;
+    margin-left: -25%;
 }
 /* hero section ends here */
 
@@ -255,7 +260,11 @@ form > div {
     .facts-container::-webkit-scrollbar {
         display: none;
     }
-
+    
+    .facts .facts-intro {
+        margin-left: -1%;
+    } 
+    
     .facts {
         margin-top: 12%;
         margin-left: 2%;
