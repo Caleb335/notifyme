@@ -20,7 +20,6 @@
 
     .input-group {
         margin: 20px;
-        padding: 8px;
     }
 </style>
 <body>
