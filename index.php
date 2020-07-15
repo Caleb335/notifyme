@@ -14,58 +14,47 @@
 <body>
     <!-- executes when the form is submitted -->
     <?php
-        if(isset($_POST['submit_btn'])) {
-            $email = $_POST['email'];
+        $email = filter_input(INPUT_POST, 'email');
+        // check for empty form submission
+        // if user input any email address create a connection to the database
+        // store the data
+        if(!empty($email)) {
+            // define database variables
+            $db_username = "root";
+            $host = "localhost";
+            $db_password = "";
+            $db_name = "SpaceSee";
 
-            $errorMessage = '';
+            // establishing connection to the database
+            $conn = new mysqli ($host, $db_username, $db_password, $db_name);
             
-            // adding the validation script
-             if(empty($_POST['email'])) {
-                 $errorMessage .= 'You forgot to enter your email address.';
-            }
-
-            if(!empty($errorMessage)) {
-                echo('<p>There was an error with your form: </p>\n');
-                echo('<ul>' . $errorMessage . '</ul>\n');
+            // if there is an error connecting to MySQL database
+            if(mysqli_connect_error()) {
+                // kill the process, by logiing an error message
+                // with the error number/code and the message
+                die('Connection error ('. mysqli_connect_errno() . ') ' . mysqli_connect_error());
             } else {
-                header("Location: ./thankyou.html");
-            }
-            // // writes the form input(data) to a CSV file called 'mydata.csv'
-            // $fs = fopen("mydata.csv", "a"); 
-            //     // concatenates, join both strings or values recieved from the form submission
-            //     fwrite($fs . $email . "\n");
-            //     fclose($fs);
-                
-            //     // redirects to a new html page on form submission
-            //     header("Location: ./thankyou.html"); 
-            //     exit;
-            // }
-
-             // create database connection and db variables
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "my_db";
-        
-            // connect to database
-            $conn = mysql_connect($servername, $username, $password, $dbname);
-            // if connection to the databse is not successful
-            // kill the process
-            if(!$conn) {
-                die("Connection failed: " . mysql_connect_error());
-            } else {
-                $sql = "INSERT INTO spaceSeeSubbers (email) values('$email')";
-                // if the database connnection has been created successfully print a message saying:
-                // new email address has been added
-                if(mysql_query($conn, $sql)) {
-                    echo 'New email address has been added successfully.';
+                $sql = "INSERT INTO SpaceSeeSubbers (email) 
+                VALUES (
+                    $email
+                )";
+                // if the connection is sucessful perform a query on the database
+                // print a message indicating the success of data inserted.
+                // else log an error message.
+                if($conn -> query($sql)) {
+                    echo "A new email address has been added to the database";
+                    header("Location: ./thankyou.html"); 
+                    exit;
                 } else {
-                    echo "Error: " .$sql . "</br>" . mysql_error($conn);
+                    echo "Error: " . $sql . " ". $conn -> error;
                 }
+                // close the connection
+                $conn -> close();
             }
-
-            // close the connection to database
-            mysqli_close($conn);
+            // if the user doesn't input an email address
+            // log an error message and kill the process
+        } else {
+            echo "email address can not be empty";
         }
     ?>
     <div class="container">
