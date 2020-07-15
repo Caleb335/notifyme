@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/app.css">
     <!-- favicon -->
     <link rel="icon" href="./assets/see.png">
+    <!-- lightbox css -->
+    <link rel="stylesheet" href="./assets/dist/css/lightbox.min.css">
 </head>
 <body>
     <!-- executes when the form is submitted -->
@@ -193,5 +195,8 @@
             </div>
         </section>
     </div>
+
+    <!-- lightbox javascript -->
+    <script src="./assets/dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

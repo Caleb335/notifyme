@@ -449,14 +449,6 @@ form > div {
         padding: 17px;
     }
 
-    #app-pages {
-        padding-left: -8%;
-    }
-
-    .app-pages {
-        margin: auto;
-    }
-
     .mecury-question, 
     .mecury-tour, 
     .mecury-overview, 
@@ -468,5 +460,9 @@ form > div {
 
     .planet-info {
         display: none;
+    }
+
+    #app_pages {
+        height: 100vh;
     }
 }
