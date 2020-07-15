@@ -210,7 +210,7 @@ form > div {
 }
 
 .planet img {
-    width: 380px;
+    width: 360px;
 }
 
 .planet-info {
@@ -449,6 +449,10 @@ form > div {
         padding: 17px;
     }
 
+    .app-pages {
+        margin: auto;
+    }
+
     .mecury-question, 
     .mecury-tour, 
     .mecury-overview, 
@@ -462,7 +466,7 @@ form > div {
         display: none;
     }
 
-    #app_pages {
-        height: 100vh;
+    .app-pages {
+        height: 100%;
     }
 }
