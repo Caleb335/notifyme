@@ -21,10 +21,6 @@
 }
 
 body {
-    background-image: url(../assets/deed.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     overflow-x: hidden;
     background: var(--web-background);
 }
@@ -34,9 +30,9 @@ body {
     height: 100vh;
 }
 /* head section starts here */
-header, #main {
-    padding: 20px;
-    margin-left: 5%;
+#header {
+    padding: 36px;
+    background-image: url(../assets/deed.png);
 }
 
 .nav-brand {
@@ -57,8 +53,8 @@ header, #main {
 /* head section ends here */
 
 /* hero section starts here */
-#main {
-    margin-top: 10%;
+#header .main {
+    margin-top: 15%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -104,6 +100,12 @@ header, #main {
 
 .facts {
     margin-top: -12%;
+}
+
+.fade {
+    animation: fadeIn .4s forwards;
+    opacity: 0;
+    animation-delay: .1s;
 }
 
 .facts .facts-intro {
@@ -194,9 +196,9 @@ form > div {
 /* app pages starts here */
 #app_pages {
     background: var(--web-background);
-    padding-top: 76px;
+    padding-top: 18px;
     padding-left: 20px;
-    margin-top: 8%;
+    margin-top: 2%;
     height: 3150px;
 }
 
@@ -353,6 +355,22 @@ form > div {
         opacity: 1;
     }
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: .1;
+    } 25% {
+        opacity: .3;
+    } 50% {
+        opacity: .6;
+    } 70% {
+        opacity: .8;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+/* keyframes ends here */
 
 
 @media only screen and (max-width: 576px) {

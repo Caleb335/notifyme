@@ -74,64 +74,60 @@
                     </div>
                 </nav>
             </header>
-        </section>
-
-        <!-- main section -->
-        <section id="main">
-            <div class="hero">
-                <div class="hero-intro">
-                    <h1>spacesee</h1>
-                    <div class="hero-details">
-                        <p>Learn about your Universe and everything in it. The app that allows you to travel through space with out leaving where you are. </p>
+            <div class="main">
+                <div class="hero">
+                    <div class="hero-intro">
+                        <h1>spacesee</h1>
+                        <div class="hero-details">
+                            <p>Learn about your Universe and everything in it. The app that allows you to travel through space with out leaving where you are. </p>
+                        </div>
+                        <p class="cta">Coming soon...</p>
                     </div>
-                    <p class="cta">Coming soon...</p>
+                </div>
+                <!-- know more -->
+                <div class="facts">
+                    <div class="facts-intro fade">
+                        <p>Did You Know?</p> <hr>
+                    </div>
+                    <div class="facts-container">
+                        <div class="fact-box one">
+                            <p class="num">01</p>
+                            <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
+                        </div>
+                        <div class="fact-box two">
+                            <p class="num">02</p>
+                            <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
+                        </div>
+                        <div class="fact-box three">
+                            <p class="num">03</p>
+                            <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- know more -->
-            <div class="facts">
-                <div class="facts-intro">
-                    <p>Did You Know?</p> <hr>
-                </div>
-                <div class="facts-container">
-                    <div class="fact-box one">
-                        <p class="num">01</p>
-                        <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
-                    </div>
-                    <div class="fact-box two">
-                        <p class="num">02</p>
-                        <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
-                    </div>
-                    <div class="fact-box three">
-                        <p class="num">03</p>
-                        <p>Neutron stars can spin at a rate of 600 rotations per second. </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- form section -->
-        <section id="form">
+           <!-- form section -->
+           <section id="form">
             <div class="form-container">
-                <form action="./index.php" method="POST">
-                    <div class="input-group">
-                        <input type="email" name="email" placeholder="Email Address" value="<?=$email;?>">
-                        <p class="message" style="opacity: .4">
-                            <?php  
-                                if($message !== "") {
-                                    echo $message;
-                                } else {
-                                    echo "";
-                                }
-                            ?>
-                        </p>
-                    </div>
-                    <div class="input-group">
-                        <input type="submit" value="Notify Me" name="submit_btn">
-                    </div>
-                </form>
-            </div>
+                    <form action="./index.php" method="POST" class="fade">
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder="Email Address" value="<?=$email;?>">
+                            <p class="message" style="opacity: .4">
+                                <?php  
+                                    if($message !== "") {
+                                        echo $message;
+                                    } else {
+                                        echo "";
+                                    }
+                                ?>
+                            </p>
+                        </div>
+                        <div class="input-group">
+                            <input type="submit" value="Notify Me" name="submit_btn">
+                        </div>
+                    </form>
+                </div>
+           </section>
         </section>
-
         <!-- app pages section -->
         <section id="app_pages">
             <div class="pages">
