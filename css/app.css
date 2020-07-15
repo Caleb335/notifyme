@@ -10,6 +10,7 @@
 
 :root {
     --web-background: #2B2B2B;
+    --web-overlay: #3d3b3b;
     --mobile-background: #050505;
     --primary-color: #E76A3B;
     --secondary-color: #85430F;
@@ -193,12 +194,23 @@ form > div {
 #app_pages {
     background: var(--web-background);
     padding-top: 76px;
-    padding-left: 53px;
+    padding-left: 20px;
     margin-top: 8%;
+    height: 3150px;
 }
 
 .pages {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pages {
+    margin: 9%;
+}
+
+.planet img {
+    width: 380px;
 }
 
 .planet-info {
@@ -206,15 +218,105 @@ form > div {
     height: 120px;
     margin-left: 7%;
     font-size: 19px;
-    margin-top: -15px;
+    padding-bottom: -5%;
 }
 
 .planet-info hr {
-    width: 15px;
+    width: 23px;
 }
 
 .info-num {
     font-weight: bold;
+}
+
+.mecury {
+    margin-left: -12%;
+}
+
+.venus {
+    margin-top: 17%;
+    margin-left: 4%;
+}
+
+.mecury-more {
+    margin-left: 5%;
+    margin-right: -5%;
+}
+
+/* pages overview */
+.mecury-question {
+    margin-top: 15%;
+    margin-left: 6%;
+}
+
+.mecury-overview {
+    margin-left: -14%;
+    margin-top: 15%;
+}
+
+.mecury-tour {
+    margin-left: 6%;
+}
+
+.pages-overview {
+    margin-left: 5%;
+    margin-top: 8%;
+}
+/* pages overview ends here */
+
+.info-venus {
+    margin-bottom: -10%;
+}
+
+.pages-overview {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.app-cta {
+    width: 1000px;
+    height: 500px;
+    background: var(--web-overlay);
+    margin-left: -5%;
+    text-align: center;
+    margin-top: 15%;
+    padding-top: 6%;
+    box-shadow: 0 5px 8px 12px rgba(0, 0, 0, 0.05);
+}
+
+.get-it {
+    font-size: 37px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 51px;
+}
+
+.about-spacesee {
+    width: 500px;
+    height: 120px;
+    margin: auto;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+.sub_btn {
+    height: 40px;
+    width: 150px;
+    background: var(--input-bg);
+    border-radius: 4px;
+    color: var(--text-dark);
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.sub_btn:hover {
+    background: var(--primary-color);
+    cursor: pointer;
+    color: var(--input-bg);
+    transition: all .3s ease-in;
 }
 /* app pages ends here */
 
@@ -333,4 +435,38 @@ form > div {
         margin-top: 5%;
     }
 
+    .app-cta {
+        width: 100%;
+    }
+
+    .get-it {
+        font-size: 18px;
+    }
+    
+    .about-spacesee {
+        font-size: 15px;
+        width: 100%;
+        padding: 17px;
+    }
+
+    #app-pages {
+        padding-left: -8%;
+    }
+
+    .app-pages {
+        margin: auto;
+    }
+
+    .mecury-question, 
+    .mecury-tour, 
+    .mecury-overview, 
+    .venus,
+    .mecury-more,
+    .mecury {
+        margin: auto;
+    }
+
+    .planet-info {
+        display: none;
+    }
 }

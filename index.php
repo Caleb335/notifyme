@@ -140,20 +140,55 @@
                     </div>
                 </div>
 
-                <div class="planet mecury">
-                    <img src="./assets/planet-mecury.png" alt="planet mecury">
+                <div class="planet venus">
+                    <div class="planet-info info-venus">
+                        <p class="info-num">02. <hr></p>
+                        <p>Flag your favorite planet.</p>
+                    </div>
+                    <img src="./assets/planet-venus.png" alt="planet mecury">
+                </div>
+
+                <div class="planet mecury-more">
+                    <img src="./assets/about-mecury.png" alt="planet mecury">
                     <div class="planet-info">
-                        <p class="info-num">01. <hr></p>
-                        <p>scroll through to select your prefered planet</p>
+                        <p class="info-num">03. <hr></p>
+                        <p>view the selected planet in 3D.</p>
+                    </div>
+                </div>
+                <!-- pages overview -->
+                <div class="pages-overview">
+                    <div class="planet mecury-overview">
+                        <div class="planet-info info-venus">
+                            <p class="info-num">04. <hr></p>
+                            <p>Flag your favorite planet.</p>
+                        </div>
+                        <img src="./assets/mecury-overview.png" alt="planet mecury">
+                    </div>
+                    <!-- another page overview -->
+                    <div class="planet mecury-tour">
+                        <img src="./assets/mecury-tour.png" alt="planet mecury">
+                        <div class="planet-info">
+                            <p class="info-num">05. <hr></p>
+                            <p>View live 360 view from the space rovers.</p>
+                        </div>
+                    </div>
+                    <!-- yet another page overview -->
+                    <div class="planet mecury-question">
+                        <div class="planet-info info-venus">
+                            <p class="info-num">06. <hr></p>
+                            <p>Check out quick to know facts about the planet.</p>
+                        </div>
+                        <img src="./assets/mecury-question.png" alt="planet mecury">
                     </div>
                 </div>
 
-                <div class="planet mecury">
-                    <img src="./assets/planet-mecury.png" alt="planet mecury">
-                    <div class="planet-info">
-                        <p class="info-num">01. <hr></p>
-                        <p>scroll through to select your prefered planet</p>
+                <!-- app call to action -->
+                <div class="app-cta">
+                    <p class="get-it">Become one of the first to get it.</p>
+                    <div class="about-spacesee">
+                        <p>SpaceSee is an an app that lets you explore the Universe and unknown facts about it.</p>
                     </div>
+                    <button class="sub_btn">Subscribe</button>
                 </div>
             </div>
         </section>
