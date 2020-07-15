@@ -25,6 +25,9 @@
             $db_password = "";
             $db_name = "SpaceSee";
 
+            // define message variable
+            $message = "";
+
             // establishing connection to the database
             $conn = new mysqli ($host, $db_username, $db_password, $db_name);
             
@@ -42,11 +45,12 @@
                 // print a message indicating the success of data inserted.
                 // else log an error message.
                 if($conn -> query($sql)) {
-                    echo "A new email address has been added to the database";
+                    $message = "A new email address has been added to the database";
+                    // redirect to thankyou.html
                     header("Location: ./thankyou.html"); 
                     exit;
                 } else {
-                    echo "Error: " . $sql . " ". $conn -> error;
+                    $message = "Error: " . $sql . " ". $conn -> error;
                 }
                 // close the connection
                 $conn -> close();
@@ -54,7 +58,7 @@
             // if the user doesn't input an email address
             // log an error message and kill the process
         } else {
-            echo "email address can not be empty";
+            $message = "email address can not be empty";
         }
     ?>
     <div class="container">
@@ -111,6 +115,15 @@
                 <form action="./index.php" method="POST">
                     <div class="input-group">
                         <input type="email" name="email" placeholder="Email Address" value="<?=$email;?>">
+                        <p class="message" style="opacity: .4">
+                            <?php  
+                                if($message !== "") {
+                                    echo $message;
+                                } else {
+                                    echo "";
+                                }
+                            ?>
+                        </p>
                     </div>
                     <div class="input-group">
                         <input type="submit" value="Notify Me" name="submit_btn">
