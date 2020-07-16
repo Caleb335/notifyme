@@ -20,10 +20,10 @@
         // store the data
         if(!empty($email)) {
             // define database variables
-            $db_username = "root";
-            $host = "localhost";
-            $db_password = "";
-            $db_name = "SpaceSee";
+            $db_username = "b7c616541a3b3b";
+            $host = "us-cdbr-east-02.cleardb.com";
+            $db_password = "b1523079@";
+            $db_name = "heroku_6d1b6ae5643c2b4";
 
             // define message variable
             $message = "";
@@ -130,6 +130,9 @@
         </section>
         <!-- app pages section -->
         <section id="app_pages">
+            <div class="absolute-earth">
+                <img src="./assets/typo.png" alt="">
+            </div>
             <div class="pages">
                 <!-- first page -->
                 <div class="planet mecury">

@@ -205,10 +205,21 @@ form > div {
     height: 3150px;
 }
 
+.absolute-earth {
+    position: absolute;
+    margin: auto;
+    left: 480px;
+    top: 1500px;
+}
+
 .pages {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.planet {
+    z-index: 3;
 }
 
 .pages {
