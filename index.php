@@ -135,7 +135,7 @@
             <div class="pages">
             <h2>App features</h2>
                 <!-- first page -->
-                <div class="planet mecury">
+                <div class="planet mecury ">
                     <div class="planet-view">
                         <div class="absolute-mars">
                             <img src="./assets/planet-mars.png" class="mars" alt="">

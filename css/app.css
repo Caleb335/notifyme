@@ -242,6 +242,13 @@ form > div {
     justify-content: space-between;
 }
 
+.scrollspy {
+    animation: leftSlideIn 1s forwards;
+    opacity: 0;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-play-state: paused;
+}
+
 .planet-view {
     margin-top: -40%;
 }
@@ -515,6 +522,35 @@ form > div {
         padding: 40px;
     }
 
+    .pages h2 {
+        font-size: 22px;
+    }
+
+    .pages img {
+        width: 120px;
+    }
+
+    .planet-info {
+        font-size: 18px;
+        font-weight: normal;
+        margin-top: -20%;
+        padding: 15px;
+        width: 200px;
+    }
+
+    .pages .mecury {
+        padding-top: 20%;
+    }
+
+    .flex-overview-info {
+        margin-top: 38%;
+        padding: 0px;
+    }
+
+    .flex-overview-info .planet-info {
+        font-size: 16px;
+    }
+
     .pages .planet {
         padding-top: 40px;
         padding-bottom: 30px;
@@ -528,10 +564,10 @@ form > div {
     .mecury {
         margin: auto;
     }
-
+/* 
     .planet-info {
         display: none;
-    }
+    } */
 
     .absolute-earth {
         width: 350px;
