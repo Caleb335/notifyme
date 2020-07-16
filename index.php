@@ -10,6 +10,8 @@
     <link rel="icon" href="./assets/see.png">
     <!-- lightbox css -->
     <link rel="stylesheet" href="./assets/dist/css/lightbox.min.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d9e33f69d6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- executes when the form is submitted -->
@@ -127,6 +129,7 @@
         <!-- app pages section -->
         <section id="app_pages">
             <div class="pages">
+            <h2>App features</h2>
                 <!-- first page -->
                 <div class="planet mecury">
                     <div class="planet-view">
@@ -220,7 +223,15 @@
                     <div class="about-spacesee">
                         <p>SpaceSee is an an app that lets you explore the Universe and unknown facts about it.</p>
                     </div>
-                    <button class="sub_btn">Subscribe</button>
+                    <button class="sub_btn">
+                        <a href="#header">Subscribe</a>
+                    </button>
+                    <div class="socials">
+                        <span>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-facebook-square"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
