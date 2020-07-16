@@ -32,7 +32,10 @@ body {
 /* head section starts here */
 #header {
     padding: 36px;
-    background-image: url(../assets/deed.png);
+    background-image: url(../assets/space.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .nav-brand {
