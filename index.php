@@ -36,18 +36,15 @@
                 // with the error number/code and the message
                 die('Connection error ('. mysqli_connect_errno() . ') ' . mysqli_connect_error());
             } else {
-                $sql = "INSERT INTO SpaceSeeSubbers (email) 
+                $sql = "INSERT INTO SpaceSubbers  (email) 
                 VALUES (
-                    $email
+                    '$email'
                 )";
                 // if the connection is sucessful perform a query on the database
                 // print a message indicating the success of data inserted.
                 // else log an error message.
                 if($conn -> query($sql)) {
-                    $message = "A new email address has been added to the database";
-                    // redirect to thankyou.html
-                    header("Location: ./thankyou.html"); 
-                    exit;
+                    $message = "Your email address has been received. Thanks";
                 } else {
                     $message = "Error: " . $sql . " ". $conn -> error;
                 }
@@ -163,7 +160,7 @@
 
                 <div class="planet mecury-more">
                     <div class="planet-view">
-                        <div class="absolute-mars mecury">
+                        <div class="absolute-mars mars">
                             <img src="./assets/planet-mars.png" alt="">
                         </div>
                         <a href="./assets/about-mecury.png" data-lightbox="about-mecury" data-alt="planet mecury">
@@ -179,37 +176,41 @@
                 <div class="pages-overview">
                     <div class="planet mecury-overview">
                         <div class="planet-view">
-                            <div class="absolute-mars overview">
+                            <div class="absolute-mars tour">
                                 <img src="./assets/moon-plain.png" alt="">
                             </div>
+                            <a href="./assets/mecury-tour.png" data-lightbox="about-mecury" data-alt="planet mecury">
+                                <img src="./assets/mecury-tour.png" alt="planet mecury">
+                            </a>
+                        </div>
+                        <div class="planet-info info-venus">
+                            <p class="info-num">05</p>
+                            <p>View live 360 view from the Space rovers.</p>
+                        </div>                       
+                    </div>
+                    <!-- another page overview -->
+                    <div class="flex-overview">
+                        <div class="planet mecury-question">
+                            <a href="./assets/mecury-question.png" data-lightbox="about-mecury" data-alt="planet mecury">
+                                <img src="./assets/mecury-question.png" alt="planet mecury">
+                            </a>                       
+                        </div>
+                        <div class="flex-overview-info">
+                            <div class="planet-info">
+                                <p class="info-num">04</p>
+                                <p>Get to know more about the beautiful planet.</p>
+                            </div>
+                            <div class="planet-info info-venus">
+                                <p class="info-num">06</p>
+                                <p>Check out quick to know facts about the planet.</p>
+                            </div>
+                        </div>
+                        <!-- yet another page overview -->
+                        <div class="planet mecury-overview">
                             <a href="./assets/mecury-overview.png" data-lightbox="about-mecury" data-alt="planet mecury">
                                 <img src="./assets/mecury-overview.png" alt="planet mecury">
                             </a>
                         </div>
-                        <div class="planet-info info-venus">
-                            <p class="info-num">04</p>
-                            <p>Flag your favorite planet.</p>
-                        </div>                       
-                    </div>
-                    <!-- another page overview -->
-                    <div class="planet mecury-tour">
-                        <a href="./assets/mecury-tour.png" data-lightbox="about-mecury" data-alt="planet mecury">
-                            <img src="./assets/mecury-tour.png" alt="planet mecury">
-                        </a>                       
-                        <div class="planet-info">
-                            <p class="info-num">05</p>
-                            <p>View live 360 view from the space rovers.</p>
-                        </div>
-                    </div>
-                    <!-- yet another page overview -->
-                    <div class="planet mecury-question">
-                        <div class="planet-info info-venus">
-                            <p class="info-num">06</p>
-                            <p>Check out quick to know facts about the planet.</p>
-                        </div>
-                        <a href="./assets/mecury-question.png" data-lightbox="about-mecury" data-alt="planet mecury">
-                            <img src="./assets/mecury-question.png" alt="planet mecury">
-                        </a>
                     </div>
                 </div>
 

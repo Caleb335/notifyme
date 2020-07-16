@@ -235,7 +235,7 @@ form > div {
     margin-top: -40%;
 }
 
-.mecury img {
+.mars img {
     margin-left: 120%;
     width: 300px;
     height: 340px;
@@ -247,6 +247,23 @@ form > div {
 
 .planet img {
     width: 360px;
+}
+
+.tour img {
+    margin-left: 86%;
+}
+
+.flex-overview {
+    display: flex;
+}
+
+.flex-overview::-webkit-scrollbar {
+    display: none;
+}
+
+.flex-overview-info {
+    margin-top: 10%;
+    padding: 30px;
 }
 
 .planet-info {
@@ -368,8 +385,8 @@ form > div {
 
 @media only screen and (max-width: 576px) {
     header, #main {
-        padding: 20px;
-        margin-left: 3%;
+        padding: 5px;
+        margin-left: -4%;
     }
 
     #main {
@@ -435,10 +452,15 @@ form > div {
         display: block;
     }
 
+    .message p {
+        text-align: center;
+        margin-left: -3%;
+    }
+
     form input {
-        width: 120%;
+        width: 150%;
         margin-bottom: 3%;
-        margin-left: -18%;
+        margin-left: -32%;
     }
 
     input[type="submit"] {
@@ -462,8 +484,14 @@ form > div {
         padding: 17px;
     }
 
-    .app-pages {
+    .pages {
         margin: auto;
+        padding: 40px;
+    }
+
+    .pages .planet {
+        padding-top: 40px;
+        padding-bottom: 30px;
     }
 
     .mecury-question, 
@@ -486,5 +514,14 @@ form > div {
 
     .absolute-earth img {
         width: 100%;
+    }
+
+    .flex-overview {
+        width: 380px;
+        overflow-x: auto;
+    }
+
+    .absolute-earth, .absolute-mars {
+        display: none;
     }
 }
