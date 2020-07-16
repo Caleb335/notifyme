@@ -206,20 +206,39 @@ form > div {
 }
 
 .absolute-earth {
-    position: absolute;
-    margin: auto;
-    left: 480px;
-    top: 1500px;
+    margin-left: 45%;
+    margin-top: 180%;
 }
 
-.pages {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.absolute-mars {
+    height: 408px;
+    width: 400px;
+}
+
+.absolute-mars img {
+    height: 100%;
+    width: 100%;
+    margin-left: 45%;
+    margin-top: 136%;
+}
+
+.earth img {
+    height: 398px;
 }
 
 .planet {
-    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.planet-view {
+    margin-top: -40%;
+}
+
+.mecury img {
+    margin-left: 120%;
+    width: 300px;
+    height: 340px;
 }
 
 .pages {
@@ -231,72 +250,32 @@ form > div {
 }
 
 .planet-info {
-    width: 200px;
-    height: 120px;
-    margin-left: 7%;
-    font-size: 19px;
+    width: 260px;
+    height: 200px;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 26px;
     padding-bottom: -5%;
+    font-weight: bold;
 }
 
-.planet-info hr {
-    width: 23px;
+.pages .planet {
+    margin-top: 100px;
 }
 
 .info-num {
     font-weight: bold;
 }
 
-.mecury {
-    margin-left: -12%;
-}
-
-.venus {
-    margin-top: 17%;
-    margin-left: 4%;
-}
-
-.mecury-more {
-    margin-left: 5%;
-    margin-right: -5%;
-}
-
-/* pages overview */
-.mecury-question {
-    margin-top: 15%;
-    margin-left: 6%;
-}
-
-.mecury-overview {
-    margin-left: -14%;
-    margin-top: 15%;
-}
-
-.mecury-tour {
-    margin-left: 6%;
-}
-
-.pages-overview {
-    margin-left: 5%;
-    margin-top: 8%;
-}
-/* pages overview ends here */
-
 .info-venus {
     margin-bottom: -10%;
-}
-
-.pages-overview {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 5%;
 }
 
 .app-cta {
     width: 1000px;
     height: 500px;
-    background: var(--web-overlay);
-    margin-left: -5%;
+    background-image: url(../assets/stars.png);
+    margin: auto;
     text-align: center;
     margin-top: 15%;
     padding-top: 6%;
@@ -498,5 +477,14 @@ form > div {
 
     .planet-info {
         display: none;
+    }
+
+    .absolute-earth {
+        width: 350px;
+        left: 55px;
+    }
+
+    .absolute-earth img {
+        width: 100%;
     }
 }
