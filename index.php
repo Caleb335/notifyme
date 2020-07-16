@@ -50,6 +50,10 @@
                 } else {
                     $message = "Error: " . $sql . " ". $conn -> error;
                 }
+                // send a mail to the user on confirmation
+                $confirmation_message = "Thank you for reaching out to us. \n We'd let you know as soon as the app is released!";
+                $subject = "SpaceSee App Beta";
+                mail("$email", $subject, $headers, $confirmation_message);
                 // close the connection
                 $conn -> close();
             }
