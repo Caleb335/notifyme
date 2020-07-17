@@ -423,6 +423,7 @@ form > div {
     header, #main {
         padding: 5px;
         margin-left: -4%;
+        text-align: center;
     }
 
     #main {
@@ -432,14 +433,18 @@ form > div {
     .hero-intro h1 {
         font-size: 60px;
         padding-top: 15px;
+        text-align: center;
+        margin-bottom: 8px;
     }
     
     .cta {
         padding-top: 13px;
+        text-align: center;
     }
 
     .hero-details {
         width: 100%;
+        text-align: center;
     }
 
     .hero-details p {
@@ -447,8 +452,8 @@ form > div {
     }
 
     .facts-container {
-        width: 350px;
-        margin-left: -3%;
+        width: 400px;
+        margin-left: 5%;
         display: flex;
         overflow-x: auto;
     }
@@ -458,7 +463,7 @@ form > div {
     }
     
     .facts .facts-intro {
-        margin-left: -1%;
+        margin-left: 5%;
     } 
     
     .facts {

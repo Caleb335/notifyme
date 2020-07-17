@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/dist/css/lightbox.min.css">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/d9e33f69d6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 </head>
 <body>
     <!-- executes when the form is submitted -->
@@ -135,8 +136,8 @@
             <div class="pages">
             <h2>App features</h2>
                 <!-- first page -->
-                <div class="planet mecury ">
-                    <div class="planet-view">
+                <div class="planet mecury">
+                    <div class="planet-view animate__animated animate__fadeInLeftBig">
                         <div class="absolute-mars">
                             <img src="./assets/planet-mars.png" class="mars" alt="">
                         </div>
@@ -144,14 +145,14 @@
                             <img src="./assets/planet-mecury.png" alt="planet mecury">
                         </a>
                     </div>
-                    <div class="planet-info">
+                    <div class="planet-info animate__animated animate__fadeInRightBig">
                         <p class="info-num">01</p>
                         <p>scroll through to select your prefered planet</p>
                     </div>
                 </div>
 
                 <div class="planet venus">
-                    <div class="planet-view">
+                    <div class="planet-view animate__animated animate__fadeInLeftBig">
                         <div class="absolute-mars earth">
                             <img src="./assets/typo.png" alt="">
                         </div> 
@@ -159,14 +160,14 @@
                             <img src="./assets/planet-venus.png" alt="planet mecury">
                         </a>
                     </div>
-                    <div class="planet-info info-venus">
+                    <div class="planet-info info-venus animate__animated animate__fadeInRightBig">
                         <p class="info-num">02</p>
                         <p>Flag your favorite planet.</p>
                     </div>
                 </div>
 
                 <div class="planet mecury-more">
-                    <div class="planet-view">
+                    <div class="planet-view animate__animated animate__fadeInLeftBig">
                         <div class="absolute-mars mars">
                             <img src="./assets/planet-mars.png" alt="">
                         </div>
@@ -174,7 +175,7 @@
                             <img src="./assets/about-mecury.png" alt="planet mecury">
                         </a>
                     </div>
-                    <div class="planet-info">
+                    <div class="planet-info animate__animated animate__fadeInRightBig">
                         <p class="info-num">03</p>
                         <p>view the selected planet in 3D.</p>
                     </div>
@@ -182,7 +183,7 @@
                 <!-- pages overview -->
                 <div class="pages-overview">
                     <div class="planet mecury-overview">
-                        <div class="planet-view">
+                        <div class="planet-view animate__animated animate__fadeInLeftBig">
                             <div class="absolute-mars tour">
                                 <img src="./assets/moon-plain.png" alt="">
                             </div>
@@ -190,30 +191,30 @@
                                 <img src="./assets/mecury-tour.png" alt="planet mecury">
                             </a>
                         </div>
-                        <div class="planet-info info-venus">
+                        <div class="planet-info info-venus animate__animated animate__fadeInRightBig">
                             <p class="info-num">05</p>
                             <p>View live 360 view from the Space rovers.</p>
                         </div>                       
                     </div>
                     <!-- another page overview -->
                     <div class="flex-overview">
-                        <div class="planet mecury-question">
+                        <div class="planet mecury-question animate__animated animate__fadeInLeftBig">
                             <a href="./assets/mecury-question.png" data-lightbox="about-mecury" data-alt="planet mecury">
                                 <img src="./assets/mecury-question.png" alt="planet mecury">
                             </a>                       
                         </div>
                         <div class="flex-overview-info">
-                            <div class="planet-info">
+                            <div class="planet-info animate__animated animate__fadeInTopBig">
                                 <p class="info-num">04</p>
                                 <p>Get to know more about the beautiful planet.</p>
                             </div>
-                            <div class="planet-info info-venus">
+                            <div class="planet-info info-venus animate__animated animate__fadeInBottomBig">
                                 <p class="info-num">06</p>
                                 <p>Check out quick to know facts about the planet.</p>
                             </div>
                         </div>
                         <!-- yet another page overview -->
-                        <div class="planet mecury-overview">
+                        <div class="planet mecury-overview animate__animated animate__fadeInRightBig">
                             <a href="./assets/mecury-overview.png" data-lightbox="about-mecury" data-alt="planet mecury">
                                 <img src="./assets/mecury-overview.png" alt="planet mecury">
                             </a>
@@ -243,5 +244,9 @@
 
     <!-- lightbox javascript -->
     <script src="./assets/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW.init();
+    </script>
 </body>
 </html>
