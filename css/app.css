@@ -27,7 +27,6 @@ body {
 
 .container {
     margin: 0 auto;
-    height: 100vh;
 }
 /* head section starts here */
 #header {
@@ -416,7 +415,11 @@ form > div {
 /* keyframes ends here */
 
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {    
+    #app_pages {
+        height: 100%;
+    }
+    
     header, #main {
         padding: 5px;
         margin-left: -4%;
@@ -527,7 +530,7 @@ form > div {
     }
 
     .pages img {
-        width: 120px;
+        width: 150px;
     }
 
     .planet-info {
